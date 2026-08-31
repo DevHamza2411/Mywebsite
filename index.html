@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Hamza Yaseen | DevOps Engineer</title>
+
+<meta name="description"
+    content="Hamza Yaseen - Aspiring DevOps Engineer specializing in Docker, Kubernetes, AWS, Terraform, CI/CD and DevSecOps.">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0a0f1c;
+        color: #e6edf3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* NAVBAR */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(10, 15, 28, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .nav-container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 18px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #38bdf8;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #cbd5e1;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #38bdf8;
+    }
+
+    /* GENERAL */
+    section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 100px 25px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 45px;
+        text-align: center;
+    }
+
+    .section-title span {
+        color: #38bdf8;
+    }
+
+    /* HERO */
+    #home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 120px;
+    }
+
+    .hero {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-text small {
+        color: #38bdf8;
+        font-size: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(45px, 7vw, 75px);
+        line-height: 1.05;
+        margin: 12px 0;
+    }
+
+    .hero-text h1 span {
+        color: #38bdf8;
+    }
+
+    .hero-text h2 {
+        color: #94a3b8;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        color: #94a3b8;
+        max-width: 650px;
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        margin-top: 30px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 13px 24px;
+        border-radius: 8px;
+        border: 1px solid #38bdf8;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background: #38bdf8;
+        color: #07111f;
+    }
+
+    .btn-primary:hover {
+        background: transparent;
+        color: #38bdf8;
+    }
+
+    .btn-outline {
+        color: #38bdf8;
+    }
+
+    .btn-outline:hover {
+        background: #38bdf8;
+        color: #07111f;
+    }
+
+    /* PROFILE IMAGE */
+    .profile-container {
+        flex-shrink: 0;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #38bdf8;
+        box-shadow: 0 0 45px rgba(56, 189, 248, 0.25);
+    }
+
+    /* ABOUT */
+    .about-card {
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 15px;
+        padding: 35px;
+    }
+
+    .about-card p {
+        color: #94a3b8;
+        font-size: 17px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 18px;
+    }
+
+    .skill {
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 10px;
+        padding: 22px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .skill:hover {
+        transform: translateY(-5px);
+        border-color: #38bdf8;
+    }
+
+    .skill h3 {
+        font-size: 16px;
+        color: #e2e8f0;
+    }
+
+    /* TIMELINE */
+    .timeline {
+        border-left: 2px solid #38bdf8;
+        padding-left: 30px;
+    }
+
+    .timeline-item {
+        position: relative;
+        background: #111827;
+        border: 1px solid #1e293b;
+        padding: 28px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+    }
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #38bdf8;
+        border-radius: 50%;
+        left: -37px;
+        top: 34px;
+    }
+
+    .timeline-item h3 {
+        color: #38bdf8;
+        margin-bottom: 5px;
+    }
+
+    .timeline-item h4 {
+        color: #e2e8f0;
+        margin-bottom: 5px;
+    }
+
+    .date {
+        color: #64748b;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .timeline-item ul {
+        padding-left: 20px;
+        color: #94a3b8;
+    }
+
+    .timeline-item li {
+        margin-bottom: 8px;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .project {
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        padding: 30px;
+        transition: 0.3s;
+    }
+
+    .project:hover {
+        transform: translateY(-7px);
+        border-color: #38bdf8;
+    }
+
+    .project-number {
+        color: #38bdf8;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .project h3 {
+        margin: 12px 0;
+        font-size: 22px;
+    }
+
+    .project p {
+        color: #94a3b8;
+        margin-bottom: 20px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tag {
+        background: #0a0f1c;
+        border: 1px solid #263449;
+        color: #7dd3fc;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    /* EDUCATION */
+    .education-card {
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        padding: 30px;
+    }
+
+    .education-card h3 {
+        color: #38bdf8;
+        margin-bottom: 8px;
+    }
+
+    .education-card p {
+        color: #94a3b8;
+    }
+
+    /* ACHIEVEMENT */
+    .achievement {
+        background: #111827;
+        border-left: 4px solid #38bdf8;
+        padding: 25px;
+        border-radius: 8px;
+        color: #94a3b8;
+    }
+
+    /* CONTACT */
+    .contact-box {
+        text-align: center;
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 15px;
+        padding: 45px 25px;
+    }
+
+    .contact-box p {
+        color: #94a3b8;
+        margin: 10px 0;
+    }
+
+    .contact-links {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        border-top: 1px solid #1e293b;
+        padding: 25px;
+        color: #64748b;
+        font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+        .nav-links {
+            display: none;
+        }
+
+        .hero {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        .hero-text p {
+            margin: auto;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 220px;
+            height: 220px;
+        }
+
+        .section-title {
+            font-size: 27px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
+        <a href="#home" class="logo">&lt;HY /&gt;</a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section id="home">
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <small>HELLO, I'M</small>
+
+            <h1>
+                Hamza <span>Yaseen</span>
+            </h1>
+
+            <h2>Aspiring DevOps Engineer</h2>
+
+            <p>
+                An aspiring DevOps Engineer with an automation mindset,
+                passionate about building scalable infrastructure,
+                reliable CI/CD pipelines and secure application delivery.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+        <div class="profile-container">
+            <img
+                src="profile.PNG"
+                alt="Hamza Yaseen - DevOps Engineer"
+                class="profile-image">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
+
+    <div class="about-card">
+
+        <p>
+            Aspiring DevOps Engineer with an automation mindset,
+            driving innovation through hands-on Kubernetes and Docker,
+            and implementing scalable CI/CD pipelines. Proficient in
+            applying security practices for robust application delivery.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="section-title">
+        Technical <span>Skills</span>
+    </h2>
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <h3>Python</h3>
+        </div>
+
+        <div class="skill">
+            <h3>SQL</h3>
+        </div>
+
+        <div class="skill">
+            <h3>Terraform</h3>
+        </div>
+
+        <div class="skill">
+            <h3>Docker</h3>
+        </div>
+
+        <div class="skill">
+            <h3>Kubernetes</h3>
+        </div>
+
+        <div class="skill">
+            <h3>Jenkins CI/CD</h3>
+        </div>
+
+        <div class="skill">
+            <h3>ArgoCD</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+    <h2 class="section-title">
+        Work <span>Experience</span>
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>Software Developer Intern</h3>
+
+            <h4>Hills Dot — Bahawalpur, Pakistan</h4>
+
+            <div class="date">
+                June 2026 – Present · Remote
+            </div>
+
+            <ul>
+                <li>
+                    Implemented an end-to-end DevOps automation pipeline
+                    for a full-stack e-commerce application.
+                </li>
+
+                <li>
+                    Orchestrated Kubernetes pods in scalable AWS EKS
+                    clusters using Terraform IaC to improve performance
+                    by 99%.
+                </li>
+
+                <li>
+                    Maintained security and robustness of the application
+                    using Docker private registries and Secret Manager.
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title">
+        Featured <span>Projects</span>
+    </h2>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                Chat Application with GitOps & DevSecOps
+            </h3>
+
+            <p>
+                Executed an end-to-end project involving integration
+                and system design to manage databases, servers and
+                orchestration using modern DevOps technologies.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Docker Compose</span>
+                <span class="tag">Ansible</span>
+                <span class="tag">Python</span>
+                <span class="tag">GitOps</span>
+                <span class="tag">DevSecOps</span>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Serverless Application Deployment on AWS
+            </h3>
+
+            <p>
+                Implemented a serverless application focused on reducing
+                infrastructure costs, using Lambda, API Gateway and
+                DynamoDB for the backend architecture.
+            </p>
+
+            <div class="tags">
+                <span class="tag">AWS</span>
+                <span class="tag">Lambda</span>
+                <span class="tag">API Gateway</span>
+                <span class="tag">DynamoDB</span>
+                <span class="tag">Serverless</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+    <h2 class="section-title">
+        <span>Education</span>
+    </h2>
+
+    <div class="education-card">
+
+        <h3>
+            Bachelor's in Computer Science
+        </h3>
+
+        <p>
+            University of Central Punjab
+        </p>
+
+        <p>
+            Lahore, Pakistan · 2016 – 2020
+        </p>
+
+        <br>
+
+        <p>
+            Represented the university in the Technical Fest.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+
+    <h2 class="section-title">
+        <span>Achievements</span>
+    </h2>
+
+    <div class="achievement">
+
+        Assisted teachers on a networking-based project
+        for a seminar.
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="section-title">
+        Get In <span>Touch</span>
+    </h2>
+
+    <div class="contact-box">
+
+        <p>
+            Interested in DevOps, cloud infrastructure,
+            automation and scalable application delivery?
+        </p>
+
+        <div class="contact-links">
+
+            <a
+                href="mailto:hamzaysn123@gmail.com"
+                class="btn btn-primary">
+                Email Me
+            </a>
+
+            <!-- Replace the # links below with your actual profiles -->
+            <a
+                href="#"
+                class="btn btn-outline"
+                target="_blank">
+                GitHub
+            </a>
+
+            <a
+                href="#"
+                class="btn btn-outline"
+                target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Hamza Yaseen. All Rights Reserved.
+
+</footer>
+```
+
+</body>
+</html>
