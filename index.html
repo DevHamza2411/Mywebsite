@@ -316,6 +316,59 @@
         margin-bottom: 20px;
     }
 
+    /* AI DEVOPS PROJECT GALLERY */
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 20px 0 25px;
+    }
+
+    .project-gallery img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid #263449;
+        background: #0a0f1c;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .project-gallery img:hover {
+        transform: scale(1.02);
+        border-color: #38bdf8;
+        box-shadow: 0 0 18px rgba(56, 189, 248, 0.12);
+    }
+
+    .project-gallery .gallery-main {
+        grid-column: 1 / -1;
+        height: 300px;
+    }
+
+    .project-workflow {
+        background: #0a0f1c;
+        border: 1px solid #263449;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 20px 0;
+        color: #7dd3fc;
+        font-size: 13px;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    .project-links {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .project-links .btn {
+        display: inline-block;
+    }
+
     .tags {
         display: flex;
         flex-wrap: wrap;
@@ -583,12 +636,12 @@
 
         <div class="timeline-item">
 
-            <h3>Software Developer Intern</h3>
+            <h3>DevOps Engineer</h3>
 
-            <h4>Hills Dot — Bahawalpur, Pakistan</h4>
+            <h4>Hills Dot Ltd — Punjab, Pakistan</h4>
 
             <div class="date">
-                June 2026 – Present · Remote
+                June 2025 – Present · Remote
             </div>
 
             <ul>
@@ -605,7 +658,7 @@
                 </li>
 
                 <li>
-                    Maintained security and robustness of the application
+                    Maintained the security and robustness of the application
                     using Docker private registries and Secret Manager.
                 </li>
 
@@ -627,7 +680,7 @@
 
     <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
+        <!-- PROJECT 01 - AI DEVOPS LOG ANALYZER -->
         <div class="project">
 
             <div class="project-number">
@@ -635,27 +688,123 @@
             </div>
 
             <h3>
-                Chat Application
+                AI-Powered DevOps Log Analyzer
             </h3>
 
             <p>
-                Executed an end-to-end project involving integration
-                and system design to manage databases, servers and
-                orchestration using modern DevOps technologies.
+                Built an AI-powered DevOps log analysis system that connects
+                a Streamlit frontend with a FastAPI backend and an AI agent.
+                The agent uses a dedicated log-analysis tool to retrieve and
+                process system/application logs, identify errors and warnings,
+                investigate potential root causes, and provide actionable
+                recommendations.
+            </p>
+
+            <!-- Project screenshots:
+                 01 = Frontend
+                 02 = JSON/API response
+                 03-11 = Agent, tools, API and implementation screenshots
+            -->
+            <div class="project-gallery">
+
+                <img
+                    src="assets/devops-ai/01-frontend.png"
+                    alt="AI DevOps Log Analyzer Streamlit frontend"
+                    class="gallery-main">
+
+                <img
+                    src="assets/devops-ai/02-api-response.png"
+                    alt="DevOps Agent API JSON response">
+
+                <img
+                    src="assets/devops-ai/03-devops-tools.png"
+                    alt="DevOps log analysis tool implementation">
+
+                <img
+                    src="assets/devops-ai/04-agent-tool-integration.png"
+                    alt="AI agent tool integration">
+
+                <img
+                    src="assets/devops-ai/05-agent-execution.png"
+                    alt="AI agent execution and tool calling">
+
+                <img
+                    src="assets/devops-ai/06-log-analysis-output.png"
+                    alt="AI log analysis output">
+
+                <img
+                    src="assets/devops-ai/07-frontend-code.png"
+                    alt="Streamlit frontend implementation">
+
+                <img
+                    src="assets/devops-ai/08-fastapi-endpoint.png"
+                    alt="FastAPI chat endpoint">
+
+                <img
+                    src="assets/devops-ai/09-agent-ui.png"
+                    alt="DevOps Log Analyzer Agent interface">
+
+                <img
+                    src="assets/devops-ai/10-api-docs.png"
+                    alt="FastAPI Swagger API documentation">
+
+                <img
+                    src="assets/devops-ai/11-streamlit-server.png"
+                    alt="Streamlit application running locally">
+
+            </div>
+
+            <div class="project-workflow">
+                <strong>Workflow</strong><br>
+                User → Streamlit Frontend → FastAPI → AI Agent
+                → Log Analysis Tool → Logs → AI Analysis
+                → Recommendation → Human Review → Approval → Action
+            </div>
+
+            <p>
+                The system follows a Human-in-the-Loop approach. The agent
+                can read and analyze logs and recommend remediation steps,
+                while critical operational decisions remain under human
+                review and approval before an action is taken.
             </p>
 
             <div class="tags">
-                <span class="tag">Kubernetes</span>
-                <span class="tag">Docker</span>
-                <span class="tag">Docker Compose</span>
-                <span class="tag">Ansible</span>
+                <span class="tag">AWS CloudWatch</span>
                 <span class="tag">Python</span>
+                <span class="tag">Boto3</span>
+                <span class="tag">AI Agent</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">Ollama</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Docker</span>
+                <span class="tag">DevOps</span>
+                <span class="tag">Observability</span>
+            </div>
+
+            <div class="project-links">
+                <a
+                    href="YOUR-AI-DEVOPS-GITHUB-REPOSITORY-URL"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View Project
+                </a>
+
+                <a
+                    href="YOUR-AI-DEVOPS-GITHUB-REPOSITORY-URL"
+                    class="btn btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub
+                </a>
             </div>
 
         </div>
 
 
-        <!-- PROJECT 2 -->
+        <!-- PROJECT 02 -->
         <div class="project">
 
             <div class="project-number">
