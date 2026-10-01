@@ -384,6 +384,28 @@
         font-size: 12px;
     }
 
+    /* PROJECT IMAGE GALLERY */
+    .project-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 18px 0 22px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        max-height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid #263449;
+        display: block;
+    }
+
+    .project-image:hover {
+        border-color: #38bdf8;
+    }
+
     /* EDUCATION */
     .education-card {
         background: #111827;
@@ -680,92 +702,40 @@
 
     <div class="projects-grid">
 
-        <!-- PROJECT 01 - AI DEVOPS LOG ANALYZER -->
+        <!-- PROJECT 03 - AI DEVOPS AGENT -->
         <div class="project">
 
             <div class="project-number">
-                PROJECT 01
+                PROJECT 03
             </div>
 
-            <h3>
-                AI-Powered DevOps Log Analyzer
-            </h3>
+            <div class="project-gallery">
+                <img src="assets/devops-ai/01-frontend.png" alt="AI DevOps Agent Frontend" class="project-image">
+                <img src="assets/devops-ai/02-api-response.png" alt="AI DevOps Agent JSON API Response" class="project-image">
+                <img src="assets/devops-ai/03-agent-system-prompt.png" alt="AI DevOps Agent System Prompt" class="project-image">
+                <img src="assets/devops-ai/04-agent-execution-loop.png" alt="AI DevOps Agent Execution Loop" class="project-image">
+                <img src="assets/devops-ai/05-devops-tools.png" alt="DevOps Tools" class="project-image">
+                <img src="assets/devops-ai/06-agent-tool-integration.png" alt="AI Agent Tool Integration" class="project-image">
+                <img src="assets/devops-ai/07-agent-run-output.png" alt="AI Agent Run Output" class="project-image">
+                <img src="assets/devops-ai/08-log-analysis-output.png" alt="CloudWatch Log Analysis Output" class="project-image">
+                <img src="assets/devops-ai/09-frontend-code.png" alt="Frontend Code" class="project-image">
+                <img src="assets/devops-ai/10-fastapi-endpoint.png" alt="FastAPI Endpoint" class="project-image">
+                <img src="assets/devops-ai/11-streamlit-server.png" alt="Streamlit Frontend Server" class="project-image">
+            </div>
+
+            <h3>AI-Powered DevOps Log Analyzer</h3>
 
             <p>
-                Built an AI-powered DevOps log analysis system that connects
-                a Streamlit frontend with a FastAPI backend and an AI agent.
-                The agent uses a dedicated log-analysis tool to retrieve and
-                process system/application logs, identify errors and warnings,
-                investigate potential root causes, and provide actionable
-                recommendations.
+                Built an AI-powered DevOps log analysis system that integrates
+                AWS CloudWatch with an AI agent. The agent retrieves logs through
+                a dedicated tool, analyzes errors and warnings, identifies
+                potential root causes, and provides recommended solutions.
             </p>
 
-            <!-- Project screenshots:
-                 01 = Frontend
-                 02 = JSON/API response
-                 03-11 = Agent, tools, API and implementation screenshots
-            -->
-            <div class="project-gallery">
-
-                <img
-                    src="assets/devops-ai/01-frontend.png"
-                    alt="AI DevOps Log Analyzer Streamlit frontend"
-                    class="gallery-main">
-
-                <img
-                    src="assets/devops-ai/02-api-response.png"
-                    alt="DevOps Agent API JSON response">
-
-                <img
-                    src="assets/devops-ai/03-devops-tools.png"
-                    alt="DevOps log analysis tool implementation">
-
-                <img
-                    src="assets/devops-ai/04-agent-tool-integration.png"
-                    alt="AI agent tool integration">
-
-                <img
-                    src="assets/devops-ai/05-agent-execution.png"
-                    alt="AI agent execution and tool calling">
-
-                <img
-                    src="assets/devops-ai/06-log-analysis-output.png"
-                    alt="AI log analysis output">
-
-                <img
-                    src="assets/devops-ai/07-frontend-code.png"
-                    alt="Streamlit frontend implementation">
-
-                <img
-                    src="assets/devops-ai/08-fastapi-endpoint.png"
-                    alt="FastAPI chat endpoint">
-
-                <img
-                    src="assets/devops-ai/09-agent-ui.png"
-                    alt="DevOps Log Analyzer Agent interface">
-
-                <img
-                    src="assets/devops-ai/10-api-docs.png"
-                    alt="FastAPI Swagger API documentation">
-
-                <img
-                    src="assets/devops-ai/11-streamlit-server.png"
-                    alt="Streamlit application running locally">
-
-            </div>
-
-            <div class="project-workflow">
-                <strong>Workflow</strong><br>
-                User → Streamlit Frontend → FastAPI → AI Agent
-                → Log Analysis Tool → Logs → AI Analysis
-                → Recommendation → Human Review → Approval → Action
-            </div>
-
             <p>
-                The system follows a Human-in-the-Loop approach. The agent
-                can read and analyze logs and recommend remediation steps,
-                while critical operational decisions remain under human
-                review and approval before an action is taken.
+                The system follows a Human-in-the-Loop approach: the agent reads
+                and analyzes the logs, provides recommendations, and the human
+                engineer reviews and approves any operational action.
             </p>
 
             <div class="tags">
@@ -773,47 +743,50 @@
                 <span class="tag">Python</span>
                 <span class="tag">Boto3</span>
                 <span class="tag">AI Agent</span>
-                <span class="tag">LangChain</span>
-                <span class="tag">Ollama</span>
                 <span class="tag">FastAPI</span>
                 <span class="tag">Streamlit</span>
-                <span class="tag">REST API</span>
+                <span class="tag">Ollama</span>
+                <span class="tag">LangChain</span>
                 <span class="tag">Docker</span>
-                <span class="tag">DevOps</span>
-                <span class="tag">Observability</span>
             </div>
 
-            <div class="project-links">
-                <a
-                    href="YOUR-AI-DEVOPS-GITHUB-REPOSITORY-URL"
-                    class="btn btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Project
-                </a>
+            <br>
 
-                <a
-                    href="YOUR-AI-DEVOPS-GITHUB-REPOSITORY-URL"
-                    class="btn btn-outline"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub
-                </a>
-            </div>
+            <a href="YOUR-AI-DEVOPS-GITHUB-REPOSITORY-URL"
+               class="btn btn-outline"
+               target="_blank"
+               rel="noopener noreferrer">
+                View Project
+            </a>
 
         </div>
 
+        <!-- PROJECT 01 -->
+        <div class="project">
+            <div class="project-number">PROJECT 01</div>
+
+            <h3>Chat Application</h3>
+
+            <p>
+                Executed an end-to-end project involving integration
+                and system design to manage databases, servers and
+                orchestration using modern DevOps technologies.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Docker Compose</span>
+                <span class="tag">Ansible</span>
+                <span class="tag">Python</span>
+            </div>
+        </div>
 
         <!-- PROJECT 02 -->
         <div class="project">
+            <div class="project-number">PROJECT 02</div>
 
-            <div class="project-number">
-                PROJECT 02
-            </div>
-
-            <h3>
-                Serverless Application Deployment on AWS
-            </h3>
+            <h3>Serverless Application Deployment on AWS</h3>
 
             <p>
                 Implemented a serverless application focused on reducing
@@ -828,7 +801,6 @@
                 <span class="tag">DynamoDB</span>
                 <span class="tag">Serverless</span>
             </div>
-
         </div>
 
     </div>
