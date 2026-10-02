@@ -277,7 +277,13 @@
     }
 
     .timeline-item li {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+        color: #94a3b8;
+        line-height: 1.8;
+        margin: 12px 0 0;
     }
 
     /* PROJECTS */
@@ -388,24 +394,38 @@
 
     /* PROJECT IMAGE GALLERY */
     .project-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 18px 0 22px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin: 20px 0 25px;
+        align-items: center;
     }
 
     .project-image {
         width: 100%;
-        height: auto;
-        max-height: 260px;
-        object-fit: cover;
+        height: 360px;
+        object-fit: contain;
         border-radius: 10px;
         border: 1px solid #263449;
+        background: #0a0f1c;
         display: block;
+        transition: 0.3s;
     }
 
     .project-image:hover {
         border-color: #38bdf8;
+        box-shadow: 0 0 18px rgba(56, 189, 248, 0.12);
+    }
+
+    @media (max-width: 700px) {
+        .project-gallery {
+            grid-template-columns: 1fr;
+        }
+
+        .project-image {
+            height: auto;
+            max-height: 360px;
+        }
     }
 
     /* EDUCATION */
@@ -658,34 +678,178 @@
 
     <div class="timeline">
 
+        <!-- CURRENT ROLE -->
         <div class="timeline-item">
 
             <h3>DevOps Engineer</h3>
-
-            <h4>Hills Dot Ltd — Punjab, Pakistan</h4>
-
-            <div class="date">
-                June 2025 – Present · Remote
-            </div>
+            <h4>Hills Dot Ltd — Full-time · Punjab, Pakistan · Remote</h4>
+            <div class="date">June 2023 – Present · 3 yrs 5 mos</div>
 
             <ul>
-
                 <li>
-                    Implemented an end-to-end DevOps automation pipeline
-                    for a full-stack e-commerce application.
+                    Implemented an end-to-end DevOps automation pipeline using
+                    Jenkins and GitLab CI/CD for full-stack applications,
+                    streamlining build, testing, deployment, and release workflows.
                 </li>
 
                 <li>
-                    Orchestrated Kubernetes pods in scalable AWS EKS
-                    clusters using Terraform IaC to improve performance
-                    by 99%.
+                    Managed system design and cloud infrastructure for multi-tier
+                    applications, working across application, compute, networking,
+                    and deployment requirements.
                 </li>
 
                 <li>
-                    Maintained the security and robustness of the application
-                    using Docker private registries and Secret Manager.
+                    Orchestrated Kubernetes workloads across scalable AWS EKS and
+                    GCP GKE clusters, using Terraform for Infrastructure as Code
+                    and Python scripting with libraries such as Boto3; improved
+                    application performance by 99%.
                 </li>
 
+                <li>
+                    Strengthened application security and delivery quality through
+                    pre-commit Git hooks for secret and credential leak prevention,
+                    SonarQube code analysis, Trivy vulnerability scanning, Docker
+                    private registries, and secret-management solutions.
+                </li>
+
+                <li>
+                    Tested Dynamic Application Security Testing (DAST) by running
+                    OWASP ZAP against staging environments to identify runtime
+                    injection risks and authentication-related vulnerabilities.
+                </li>
+
+                <li>
+                    Enforced Least Privilege across containerized and Kubernetes
+                    environments by tightly scoping RBAC permissions, using non-root
+                    containers, and implementing strict network policies between
+                    microservices.
+                </li>
+
+                <li>
+                    Implemented AI and LLM-based agents for server monitoring and
+                    operational analysis, collecting and analyzing logs through
+                    agents and improving error-handling capabilities by 100%.
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- PROFESSIONAL DEVELOPMENT -->
+        <div class="timeline-item">
+
+            <h3>Professional Development</h3>
+            <h4>Career Break — Professional Development</h4>
+            <div class="date">August 2022 – December 2022 · 5 mos</div>
+
+            <p>
+                Dedicated this period to professional development and continued
+                technical growth, building knowledge and practical capability
+                relevant to software engineering, systems, cloud, and modern
+                infrastructure practices.
+            </p>
+
+        </div>
+
+        <!-- SOFTWARE PROJECT MANAGER -->
+        <div class="timeline-item">
+
+            <h3>Software Project Manager</h3>
+            <h4>Prime Motors — Contract · Punjab, Pakistan · On-site</h4>
+            <div class="date">September 2020 – December 2022 · 2 yrs 4 mos</div>
+
+            <ul>
+                <li>
+                    Managed a contract-based software project from initial client
+                    requirements through final delivery, overseeing the development
+                    of a website and its integrated application.
+                </li>
+
+                <li>
+                    Worked directly with the client to understand business
+                    requirements, define project scope, estimate effort and cost,
+                    and establish realistic development and delivery timelines.
+                </li>
+
+                <li>
+                    Led the software development team throughout the project by
+                    assigning tasks, following up on progress, resolving day-to-day
+                    issues, and keeping development aligned with client requirements.
+                </li>
+
+                <li>
+                    Coordinated between the client and technical team, translating
+                    business requirements into clear development tasks and ensuring
+                    feedback, revisions, and requested changes were communicated and
+                    implemented correctly.
+                </li>
+
+                <li>
+                    Managed the complete software development cycle, including
+                    planning, development, testing, revisions, deployment, and final
+                    handover to the client.
+                </li>
+
+                <li>
+                    Identified technical and project-related risks during development
+                    and worked with the team to resolve issues before they affected
+                    delivery timelines.
+                </li>
+
+                <li>
+                    Managed project resources and costs by tracking development
+                    efforts, required tools, and overall project expenditure.
+                </li>
+
+                <li>
+                    Maintained regular communication with the client, provided
+                    progress updates, handled feedback, and ensured the final
+                    application met the agreed requirements.
+                </li>
+
+                <li>
+                    Took a leadership role in team coordination and project-level
+                    decision-making to keep development moving and deliver the
+                    project within the agreed scope and timeline.
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- LINUX ADMINISTRATOR -->
+        <div class="timeline-item">
+
+            <h3>Linux Administrator</h3>
+            <h4>Upwork — Freelance · Pakistan · Remote</h4>
+            <div class="date">September 2019 – July 2022 · 2 yrs 11 mos</div>
+
+            <ul>
+                <li>
+                    Administered web servers including Apache and Nginx, along with
+                    relational databases such as MySQL and PostgreSQL.
+                </li>
+
+                <li>
+                    Configured SSH keys, firewalls, and system security updates to
+                    maintain secure and reliable Linux environments.
+                </li>
+
+                <li>
+                    During the global pandemic, supported the rapid shift to remote
+                    work by scaling VPN gateways and Nextcloud instances and
+                    collaborating with network teams on remote-access systems.
+                </li>
+
+                <li>
+                    Managed Linux instances across major cloud providers, handling
+                    infrastructure and system-administration requirements in cloud
+                    environments.
+                </li>
+
+                <li>
+                    Bridged traditional systems administration practices with cloud
+                    architecture, maintaining reliable systems while adapting to
+                    cloud-based infrastructure requirements.
+                </li>
             </ul>
 
         </div>
@@ -754,7 +918,7 @@
 
             <br>
 
-            <a href="YOUR-AI-DEVOPS-GITHUB-REPOSITORY-URL"
+            <a href="https://github.com/DevHamza2411/Mywebsite"
                class="btn btn-outline"
                target="_blank"
                rel="noopener noreferrer">
