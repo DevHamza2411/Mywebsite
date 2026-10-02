@@ -417,6 +417,75 @@
         box-shadow: 0 0 18px rgba(56, 189, 248, 0.12);
     }
 
+    /* EXPERIENCE - COMPACT TWO-COLUMN LAYOUT */
+    .experience-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .experience-item {
+        background: #111827;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        padding: 22px;
+        transition: 0.3s;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .experience-item:hover {
+        transform: translateY(-4px);
+        border-color: #38bdf8;
+    }
+
+    .experience-item h3 {
+        margin: 0 0 6px;
+        font-size: 19px;
+        color: #f8fafc;
+    }
+
+    .experience-item .company {
+        color: #38bdf8;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .experience-item .date-location {
+        color: #64748b;
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .experience-item ul {
+        margin: 0;
+        padding-left: 17px;
+    }
+
+    .experience-item li {
+        color: #94a3b8;
+        font-size: 13px;
+        line-height: 1.65;
+        margin-bottom: 7px;
+    }
+
+    .experience-item li:last-child {
+        margin-bottom: 0;
+    }
+
+    .experience-item.professional-development {
+        background: #0f172a;
+    }
+
+    @media (max-width: 800px) {
+        .experience-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+
     @media (max-width: 700px) {
         .project-gallery {
             grid-template-columns: 1fr;
@@ -572,6 +641,7 @@
                 <a href="#contact" class="btn btn-outline">
                     Contact Me
                 </a>
+            <a href="#experience" class="btn btn-secondary">My Experience</a>
 
             </div>
 
@@ -671,192 +741,65 @@
 
 <!-- EXPERIENCE -->
 <section id="experience">
+            <div class="section-header">
+                <span class="section-label">CAREER JOURNEY</span>
+                <h2>Work Experience</h2>
+                <p>A focused overview of my experience across DevOps, software project management, and Linux systems administration.</p>
+            </div>
 
-    <h2 class="section-title">
-        Work <span>Experience</span>
-    </h2>
+            <div class="experience-list">
 
-    <div class="timeline">
+                <article class="experience-item">
+                    <h3>DevOps Engineer</h3>
+                    <div class="company">Hills Dot Ltd · Full-time</div>
+                    <div class="date-location">Jun 2023 – Present · Punjab, Pakistan · Remote</div>
+                    <ul>
+                        <li>Implemented end-to-end DevOps automation pipelines using Jenkins and GitLab CI/CD for full-stack applications.</li>
+                        <li>Managed system design and cloud infrastructure for multi-tier applications across AWS and GCP.</li>
+                        <li>Orchestrated Kubernetes workloads across AWS EKS and GCP GKE using Terraform IaC, Python, and Boto3.</li>
+                        <li>Applied security controls including pre-commit secret checks, SonarQube, Trivy, private Docker registries, and secret management.</li>
+                        <li>Tested DAST with OWASP ZAP and enforced least-privilege RBAC, non-root containers, and network policies.</li>
+                        <li>Implemented AI/LLM agents for server monitoring, log analysis, and error handling.</li>
+                    </ul>
+                </article>
 
-        <!-- CURRENT ROLE -->
-        <div class="timeline-item">
+                <article class="experience-item">
+                    <h3>Software Project Manager</h3>
+                    <div class="company">Prime Motors · Contract</div>
+                    <div class="date-location">Sep 2020 – Dec 2022 · Punjab, Pakistan · On-site</div>
+                    <ul>
+                        <li>Managed a contract-based software project from client requirements through development, testing, deployment, and final handover.</li>
+                        <li>Defined project scope, estimated effort and cost, established timelines, and coordinated delivery.</li>
+                        <li>Led the software team, assigned tasks, tracked progress, resolved issues, and maintained alignment with requirements.</li>
+                        <li>Acted as the bridge between client and technical team, translating requirements and feedback into actionable tasks.</li>
+                        <li>Managed project risks, resources, costs, client communication, revisions, and final delivery decisions.</li>
+                    </ul>
+                </article>
 
-            <h3>DevOps Engineer</h3>
-            <h4>Hills Dot Ltd — Full-time · Punjab, Pakistan · Remote</h4>
-            <div class="date">June 2023 – Present · 3 yrs 5 mos</div>
+                <article class="experience-item">
+                    <h3>Linux Administrator</h3>
+                    <div class="company">Upwork · Freelance</div>
+                    <div class="date-location">Sep 2019 – Jul 2022 · Pakistan · Remote</div>
+                    <ul>
+                        <li>Administered web servers including Apache and Nginx and worked with MySQL and PostgreSQL databases.</li>
+                        <li>Configured SSH access, firewalls, and security updates across Linux systems.</li>
+                        <li>Supported remote-work infrastructure during the global pandemic, including VPN gateways and Nextcloud instances.</li>
+                        <li>Managed Linux instances across major cloud providers and collaborated with network teams on remote-access systems.</li>
+                        <li>Bridged traditional systems administration with cloud infrastructure and architecture.</li>
+                    </ul>
+                </article>
 
-            <ul>
-                <li>
-                    Implemented an end-to-end DevOps automation pipeline using
-                    Jenkins and GitLab CI/CD for full-stack applications,
-                    streamlining build, testing, deployment, and release workflows.
-                </li>
+                <article class="experience-item professional-development">
+                    <h3>Professional Development</h3>
+                    <div class="company">Career Break</div>
+                    <div class="date-location">Aug 2022 – Dec 2022 · 5 months</div>
+                    <ul>
+                        <li>Dedicated period for professional development and continued technical growth.</li>
+                    </ul>
+                </article>
 
-                <li>
-                    Managed system design and cloud infrastructure for multi-tier
-                    applications, working across application, compute, networking,
-                    and deployment requirements.
-                </li>
-
-                <li>
-                    Orchestrated Kubernetes workloads across scalable AWS EKS and
-                    GCP GKE clusters, using Terraform for Infrastructure as Code
-                    and Python scripting with libraries such as Boto3; improved
-                    application performance by 99%.
-                </li>
-
-                <li>
-                    Strengthened application security and delivery quality through
-                    pre-commit Git hooks for secret and credential leak prevention,
-                    SonarQube code analysis, Trivy vulnerability scanning, Docker
-                    private registries, and secret-management solutions.
-                </li>
-
-                <li>
-                    Tested Dynamic Application Security Testing (DAST) by running
-                    OWASP ZAP against staging environments to identify runtime
-                    injection risks and authentication-related vulnerabilities.
-                </li>
-
-                <li>
-                    Enforced Least Privilege across containerized and Kubernetes
-                    environments by tightly scoping RBAC permissions, using non-root
-                    containers, and implementing strict network policies between
-                    microservices.
-                </li>
-
-                <li>
-                    Implemented AI and LLM-based agents for server monitoring and
-                    operational analysis, collecting and analyzing logs through
-                    agents and improving error-handling capabilities by 100%.
-                </li>
-            </ul>
-
-        </div>
-
-        <!-- PROFESSIONAL DEVELOPMENT -->
-        <div class="timeline-item">
-
-            <h3>Professional Development</h3>
-            <h4>Career Break — Professional Development</h4>
-            <div class="date">August 2022 – December 2022 · 5 mos</div>
-
-            <p>
-                Dedicated this period to professional development and continued
-                technical growth, building knowledge and practical capability
-                relevant to software engineering, systems, cloud, and modern
-                infrastructure practices.
-            </p>
-
-        </div>
-
-        <!-- SOFTWARE PROJECT MANAGER -->
-        <div class="timeline-item">
-
-            <h3>Software Project Manager</h3>
-            <h4>Prime Motors — Contract · Punjab, Pakistan · On-site</h4>
-            <div class="date">September 2020 – December 2022 · 2 yrs 4 mos</div>
-
-            <ul>
-                <li>
-                    Managed a contract-based software project from initial client
-                    requirements through final delivery, overseeing the development
-                    of a website and its integrated application.
-                </li>
-
-                <li>
-                    Worked directly with the client to understand business
-                    requirements, define project scope, estimate effort and cost,
-                    and establish realistic development and delivery timelines.
-                </li>
-
-                <li>
-                    Led the software development team throughout the project by
-                    assigning tasks, following up on progress, resolving day-to-day
-                    issues, and keeping development aligned with client requirements.
-                </li>
-
-                <li>
-                    Coordinated between the client and technical team, translating
-                    business requirements into clear development tasks and ensuring
-                    feedback, revisions, and requested changes were communicated and
-                    implemented correctly.
-                </li>
-
-                <li>
-                    Managed the complete software development cycle, including
-                    planning, development, testing, revisions, deployment, and final
-                    handover to the client.
-                </li>
-
-                <li>
-                    Identified technical and project-related risks during development
-                    and worked with the team to resolve issues before they affected
-                    delivery timelines.
-                </li>
-
-                <li>
-                    Managed project resources and costs by tracking development
-                    efforts, required tools, and overall project expenditure.
-                </li>
-
-                <li>
-                    Maintained regular communication with the client, provided
-                    progress updates, handled feedback, and ensured the final
-                    application met the agreed requirements.
-                </li>
-
-                <li>
-                    Took a leadership role in team coordination and project-level
-                    decision-making to keep development moving and deliver the
-                    project within the agreed scope and timeline.
-                </li>
-            </ul>
-
-        </div>
-
-        <!-- LINUX ADMINISTRATOR -->
-        <div class="timeline-item">
-
-            <h3>Linux Administrator</h3>
-            <h4>Upwork — Freelance · Pakistan · Remote</h4>
-            <div class="date">September 2019 – July 2022 · 2 yrs 11 mos</div>
-
-            <ul>
-                <li>
-                    Administered web servers including Apache and Nginx, along with
-                    relational databases such as MySQL and PostgreSQL.
-                </li>
-
-                <li>
-                    Configured SSH keys, firewalls, and system security updates to
-                    maintain secure and reliable Linux environments.
-                </li>
-
-                <li>
-                    During the global pandemic, supported the rapid shift to remote
-                    work by scaling VPN gateways and Nextcloud instances and
-                    collaborating with network teams on remote-access systems.
-                </li>
-
-                <li>
-                    Managed Linux instances across major cloud providers, handling
-                    infrastructure and system-administration requirements in cloud
-                    environments.
-                </li>
-
-                <li>
-                    Bridged traditional systems administration practices with cloud
-                    architecture, maintaining reliable systems while adapting to
-                    cloud-based infrastructure requirements.
-                </li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
+            </div>
+        </section>
 
 
 <!-- PROJECTS -->
@@ -918,7 +861,7 @@
 
             <br>
 
-            <a href="https://github.com/DevHamza2411/Mywebsite"
+            <a href="https://github.com/DevHamza2411/Ai-agent-devops.git"
                class="btn btn-outline"
                target="_blank"
                rel="noopener noreferrer">
